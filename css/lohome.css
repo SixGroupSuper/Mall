@@ -1,0 +1,36 @@
+.login-box-warp .login-tab {
+    height: 50px;
+    line-height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.login-box-warp .login-tab .tab-item{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+}
+.login-box-warp{
+    float: right 
+}
+.login-box-warp .bind-login .common a {
+    float: left;
+    padding: 0 7px;
+    border-right: 1px solid #dedcd5;
+    line-height: 16px;
+}
+.login-box-warp .bind-login .common a i {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.login-form .bind-login .common .qq i {
+    background: url(../img/QQ.png?v=1541648459319) -140px -108px no-repeat;
+}
+.login-form .bind-login .common .weixin i {
+    background: url(../img/weixin.png) -140px -108px no-repeat;
+}
