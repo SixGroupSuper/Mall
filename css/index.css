@@ -116,18 +116,20 @@ ul,li{
     margin: 0 auto;
 }
 /* ------内容卡片区域 --------*/
-.global-middle{
+/* .global-middle{
     margin: 0 475px;
-}
+} */
 .jusp-floor{
     margin: 0 auto;
     position: relative;
-    min-height: 230px;
-    border: 1px red solid;
+/*     min-height: 230px;
+    border: 1px red solid; */
 }
 .jusp-floor .ju-wrappre{
+    position: relative;
+    margin: auto;
+    width: 940px;
     height: 60px;
-    line-height: 60px;
     text-align: center;
     font-size: 24px;
     color: #ffffff; 
@@ -145,12 +147,167 @@ ul,li{
     width: 940px;
 }
 /* ----卡片集区域------ */
+  /* 卡片区域 最外边的大盒子设置 */
 .ju-itemlist{
-    margin: auto;
+    margin: auto; 
     width: 940px;
 }
 .ju-itemlist .clearfix .item-small-v3{
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 410px;
+    margin: 10px 17px 10px 0;
+    border: 1px red solid;
+}
+/* ---卡片组----  这是一组3个，最后一个卡片清除外边距的设置---使第3个卡片可以上来，不跳到下一行 */
+.ju-itemlist .clearfix #remove{
+   margin-right: 0;
+}
+.ju-itemlist .link-box{
+    height: 408px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+}
+/* ------卡片图片设置----- */
+.ju-itemlist .clearfix .item-small-v3 .item-pic{
     
+    margin: 0 auto 0 -1px;
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-pic{
+    margin-bottom: 10px;
+}
+/* -----卡片<h4>标题的样式设置----- */
+.ju-itemlist .clearfix .item-small-v3 h4{
+    margin: 0 0 2px 10px;
+    overflow: hidden;
+}
+.ju-itemlist .clearfix .item-small-v3 h4 .desc{
+    display: block;
+    color: #333;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 400;
+    overflow: hidden;
+}
+/* ------卡片<h3>标题的样式设置 */
+.ju-itemlist .clearfix .item-small-v3 h3.noweap, .ju-itemlist .clearfix .item-small-v3 h4 .desc{
+    height: 20px;
+    white-space: nowrap;
+    word-break: keep-all;                                                                                                                                                                                                                                                                                                                                                                                                                               
+    text-overflow:ellipsis;
+}
+.ju-itemlist .clearfix .item-small-v3 h3{
+    margin: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0;
+    color: #999;
+}
+.ju-itemlist .clearfix .item-small-v3 .price-point{
+    display: inline-block;
+    font-weight: 400;
+    color: #e61414;
+}
+.ju-itemlist .clearfix .item-small-v3 .status-avil .noweap i{
+    float: left;
+    font-family: ju-font;
+    font-style: normal;
+    margin: 1px 1px 0 -1px;
+}
+/* 卡片-底部红块区域--的设置 */
+.ju-itemlist .clearfix .item-small-v3 .item-prices {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #e61414;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-info{
+    height: 50px;
+    overflow: hidden;
+    padding: 0 50px 0 5px;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-info .price{
+    margin-right: 8px;
+    font-size: 0;
+    color: #fff;
+    float: left;
+    font-family: Tahoma;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-info .price i{
+    margin-right: 3px;
+    font-size: 22px;
+}
+/* -----卡片价格-样式设置----- */
+.ju-itemlist .clearfix .item-small-v3 .item-info .price .J_actPrice{
+    line-height: 50px;
+    /* font-size: 38px; */
+    font-weight: 400;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-info .price .J_actPrice .yen{
+    font-size: 40px;
+}
+.ju-itemlist .clearfix .item-small-v3 .item-info .price .J_actPrice .cent{
+    font-size: 22px;
+}
+.ju-itemlist .clearfix .item-small-v3 .dock{
+    overflow: hidden;
+    margin-top: 4px;
+}
+.ju-itemlist .clearfix .item-small-v3 .dock .dock-price{
+    height: 18px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+.ju-itemlist .clearfix .item-small-v3 .dock .dock-price .benefit{
+    display: inline-block;
+    color: #FFF;
+    height: 17px;
+    line-height: 17px;
+    background: #ffb369;
+    border-radius: 10px;
+    padding: 0 6px;
+}
+.ju-itemlist .clearfix .item-small-v3 .dock .prompt{
+    height: 20px;
+    overflow: hidden;
+}
+.ju-itemlist .clearfix .item-small-v3 .dock .prompt .sold-num{
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 6px;
+    background-color: rgba(0,0,0,.1);
+    color: #fff;
+    font-size: 12px
+}
+.ju-itemlist .clearfix .item-small-v3 .dock .prompt .sold-num em{
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
+.ju-itemlist .clearfix .item-small-v3  .item-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 100%;
+    padding-left: 10px;
+    line-height: 50px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    color: #e61414;
+    background: url(https://gtms03.alicdn.com/tps/i3/TB1CUPpHVXXXXbMXXXXdTOh_FXX-112-50.png) no-repeat;
+}
