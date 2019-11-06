@@ -35,6 +35,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 ol,
 ul {
     list-style: none;
@@ -64,6 +69,7 @@ a:hover {
 
 .page {
     background: #f3f3f3;
+    height: 100%;
 }
 
 
@@ -264,6 +270,13 @@ a:hover {
     margin: auto;
     zoom: 1;
     width: 940px;
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .detail-main {
@@ -617,6 +630,7 @@ a:hover {
 
 .main-box .botbar .qrcode,
 .main-box .wanfabar .qrcode {
+    margin: auto;
     position: relative;
     float: right;
     height: 28px;
@@ -625,7 +639,7 @@ a:hover {
 
 .main-box .botbar .qrcode .qrcode_sm,
 .main-box .wanfabar .qrcode .qrcode_sm {
-    float: left;
+    float: right;
     overflow: hidden;
 }
 
@@ -639,15 +653,7 @@ a:hover {
     border-bottom: none;
     float: left;
     margin-left: 20%;
-    /* _display: inline; */
-    /* -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease; */
     transition: all .3s ease;
-}
-
-.main-box .botbar .qrcode .desc {
-    width: 124px;
 }
 
 .main-box .botbar .qrcode .desc,
@@ -657,6 +663,7 @@ a:hover {
     line-height: 14px;
     overflow: hidden;
     float: left;
+    /* margin-top: -32px; */
 }
 
 .main-box .botbar .qrcode .desc span {
@@ -666,4 +673,169 @@ a:hover {
 .main-box .botbar .qrcode .desc span,
 .main-box .wanfabar .qrcode .desc span {
     color: #e61414;
+}
+
+
+/* 图片区 */
+
+
+/* 图片--左边 */
+
+#detail-left {
+    float: left;
+    width: 212px;
+    margin-top: 16px;
+}
+
+#detail-left .widget-box {
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#detail-left .widget-box .tit {
+    padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #000;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+#detail-left .seller-info .tit .sellername {
+    float: left;
+    max-width: 155px;
+    height: 50px;
+    overflow: hidden;
+}
+
+#detail-left .widget-box .tit a {
+    color: #000;
+}
+
+#detail-left .seller-info .con {
+    padding: 6px 15px 10px;
+}
+
+#detail-left .seller-info .con h4 {
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #000;
+}
+
+#detail-left .seller-info .con table {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#detail-left .seller-info .con table td,
+#detail-left .seller-info .con table th {
+    font-weight: 400;
+    color: #999;
+    line-height: 36px;
+}
+
+#detail-left .seller-info .con table td.lt {
+    color: #217311;
+}
+
+
+/* 图片--右边 */
+
+#detail-right {
+    float: left;
+    width: 716px;
+    overflow: hidden;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+
+#detail-right .sub-box {
+    margin-top: 16px;
+    display: none;
+}
+
+.detail-detail {
+    padding-top: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    margin-top: 16px;
+    overflow: hidden;
+    min-height: 300px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+}
+
+.detail-detail .dd-header {
+    width: 714px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #d7d7d7;
+    position: absolute;
+}
+
+.detail-detail .dd-header li.current {
+    z-index: 2;
+    margin-right: -1px;
+    background: #51b2d6;
+    color: #fff;
+    font-weight: 700;
+}
+
+.detail-detail .dd-header li {
+    float: left;
+    height: 50px;
+    color: #656565;
+    font-size: 14px;
+    padding: 0 30px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.detail-detail .fix-holder {
+    height: 50px;
+    width: 100%;
+}
+
+.detail-detail .detail-con {
+    position: relative;
+}
+
+.detail-detail .dd-content {
+    padding: 18px 10px;
+    overflow: hidden;
+    width: 688px;
+}
+
+.detail-detail .detail-con .infodetail {
+    width: 688px;
+    overflow: hidden;
+}
+
+.detail-detail .detail-con img {
+    max-width: 688px;
+    max-height: 100%;
+    /* vertical-align: top; */
+}
+
+.detail-detail .detail-con div {
+    max-width: 688px;
+}
+
+.detail-detail .detail-link-more {
+    clear: both;
+    margin: 10px 20px;
+    text-align: right;
+}
+
+.detail-detail .detail-link-more a {
+    color: #36C;
+    text-decoration: none;
 }
