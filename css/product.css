@@ -67,9 +67,10 @@ a:hover {
     text-decoration: none;
 }
 
-.page {
-    background: #f3f3f3;
-    height: 100%;
+#page,
+.footer {
+    position: relative;
+    background-color: #f3f3f3;
 }
 
 
@@ -207,13 +208,9 @@ a:hover {
     height: 100%;
 }
 
-.ju-wrapper,
-.ju-content {
-    position: relative;
-    margin: auto;
-    zoom: 1;
+.ju-wrapper {
     z-index: 8000;
-    width: 940px;
+    width: 100%;
 }
 
 .ju-naver .logo {
@@ -253,12 +250,6 @@ a:hover {
     font-size: 16px;
     padding: 0 6px;
     height: 26px;
-    /* position: relative;
-    line-height: 26px; */
-    /* -webkit-border-radius: 3px;
-    -webkit-background-clip: padding-box; */
-    /* -moz-border-radius: 3px;
-    -moz-background-clip: padding; */
     border-radius: 3px;
     background-clip: padding-box;
 }
@@ -293,7 +284,6 @@ a:hover {
     float: left;
     vertical-align: middle;
     margin-right: 15px;
-    /* _display: inline; */
 }
 
 .detail-main .header .crumbs li {
@@ -308,7 +298,6 @@ a:hover {
     width: 0;
     height: 0;
     display: inline-block;
-    /* display: inline; */
     zoom: 1;
     border-style: solid;
     border-width: 4px;
@@ -325,7 +314,6 @@ a:hover {
     width: 0;
     height: 0;
     display: inline-block;
-    /* *display: inline; */
     zoom: 1;
     border-style: solid;
     border-width: 4px;
@@ -335,7 +323,6 @@ a:hover {
 .detail-main .header .bookMark {
     float: right;
     margin-right: 10px;
-    /* _display: inline; */
     font-size: 14px;
     color: #626262;
 }
@@ -348,7 +335,6 @@ a:hover {
     margin-top: 10px;
     float: left;
     width: 360px;
-    /* _overflow: hidden; */
 }
 
 .normal-pic-wrapper .normal-pic {
@@ -388,7 +374,6 @@ a:hover {
     margin-top: 12px;
     display: table-cell;
     text-align: center;
-    /* _display: inline; */
 }
 
 .normal-pic-wrapper .thumbnails li.current {
@@ -399,7 +384,6 @@ a:hover {
     width: 0;
     height: 0;
     display: inline-block;
-    /* *display: inline; */
     zoom: 1;
     border-style: solid;
     border-width: 12px 6px;
@@ -419,9 +403,7 @@ a:hover {
 .detail-main .main-box {
     float: right;
     width: 540px;
-    /* _width: 525px; */
     margin-right: 5px;
-    /* _display: inline; */
 }
 
 .detail-main .main-box h2.title {
@@ -434,16 +416,9 @@ a:hover {
     text-align: justify;
 }
 
-
-/* .detail-main .main-box .biztag {
-    height: 24px;
-    overflow: hidden;
-} */
-
 .detail-main .main-box .biztag label {
     background: #ffa100;
     display: inline-block;
-    /* *display: inline; */
     zoom: 1;
     color: #fff;
     padding: 3px 6px;
@@ -496,9 +471,7 @@ a:hover {
 
 .main-box .status-banner .oprice {
     position: relative;
-    /* float: left; */
     margin-left: 30px;
-    /* _display: inline; */
     height: 67px;
 }
 
@@ -510,11 +483,8 @@ a:hover {
 }
 
 .main-box .status-banner .originPrice {
-    /* font-size: 16px; */
     color: #fff;
-    /* position: absolute; */
     left: 0;
-    /* line-height: 24px; */
     bottom: 14px;
 }
 
@@ -531,12 +501,10 @@ a:hover {
 .main-box .status-banner .currentPrice {
     float: left;
     height: 67px;
-    /* line-height: 67px; */
     color: #fff;
     font-family: Arial;
     font-weight: 700;
     font-size: 40px;
-    /* padding-left: 30px; */
     text-align: center;
     overflow: hidden;
 }
@@ -580,7 +548,6 @@ a:hover {
     display: block;
     margin: 0 15px 0 auto;
     float: right;
-    /* _display: inline; */
     width: 128px;
     height: 37px;
     font-size: 20px;
@@ -657,7 +624,6 @@ a:hover {
     line-height: 14px;
     overflow: hidden;
     float: left;
-    /* margin-top: -32px; */
 }
 
 .main-box .botbar .qrcode .desc span {
@@ -677,8 +643,8 @@ a:hover {
 
 #detail-left {
     float: left;
-    width: 212px;
-    margin-top: 16px;
+    width: 23%;
+    margin-top: 2%;
 }
 
 #detail-left .widget-box {
@@ -742,10 +708,10 @@ a:hover {
 
 #detail-right {
     float: left;
-    width: 716px;
+    width: 76%;
     overflow: hidden;
-    margin-left: 12px;
-    margin-bottom: 20px;
+    margin-left: 1%;
+    margin-bottom: 2%;
 }
 
 #detail-right .sub-box {
@@ -754,20 +720,16 @@ a:hover {
 }
 
 .detail-detail {
-    padding-top: 0!important;
-    padding-left: 0!important;
-    padding-right: 0!important;
     margin-top: 16px;
     overflow: hidden;
-    min-height: 300px;
     border: 1px solid #d7d7d7;
     background: #fff;
 }
 
 .detail-detail .dd-header {
-    width: 714px;
+    width: 76%;
     height: 50px;
-    line-height: 50px;
+    line-height: 450%;
     border-bottom: 1px solid #d7d7d7;
     position: absolute;
 }
@@ -814,9 +776,9 @@ a:hover {
 }
 
 .detail-detail .detail-con img {
-    max-width: 688px;
+    max-width: 100%;
     max-height: 100%;
-    /* vertical-align: top; */
+    padding-left: 3%;
 }
 
 .detail-detail .detail-con div {
@@ -837,7 +799,7 @@ a:hover {
 
 /* 底部 */
 
-.footer {
+.footer .issue {
     padding: 50px 0 30px;
     border-top: 3px solid #D8DBE5;
     background: #F2F3F7;
@@ -845,11 +807,10 @@ a:hover {
 
 .footer .issue {
     overflow: hidden;
+    width: 100%;
 }
 
-#content,
-.ju-wrapper,
-.ju-content {
+.ju-wrapper {
     position: relative;
     margin: auto;
     width: 940px;
@@ -857,7 +818,7 @@ a:hover {
 
 .footer .issue .logo {
     float: left;
-    width: 185px;
+    padding-left: 20%;
 }
 
 .footer .issue .logo i {
@@ -874,7 +835,8 @@ a:hover {
 
 .footer .device {
     float: right;
-    width: 150px;
+    width: 10%;
+    padding-right: 20%;
 }
 
 .footer .device dt {
@@ -917,6 +879,10 @@ a:hover {
 
 .footer .issue .links {
     overflow: hidden;
+    float: left;
+    width: 35%;
+    margin: auto;
+    padding-left: 3%;
 }
 
 .footer .issue .links dl {
