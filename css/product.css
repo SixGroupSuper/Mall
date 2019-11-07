@@ -207,7 +207,8 @@ a:hover {
     height: 100%;
 }
 
-.ju-wrapper {
+.ju-wrapper,
+.ju-content {
     position: relative;
     margin: auto;
     zoom: 1;
@@ -233,7 +234,7 @@ a:hover {
 }
 
 .ju-naver .product-icon {
-    width: 75%;
+    width: 67%;
 }
 
 .ju-naver .nav-menu {
@@ -264,13 +265,6 @@ a:hover {
 
 
 /* 内容 */
-
-.ju-wrapper {
-    position: relative;
-    margin: auto;
-    zoom: 1;
-    width: 940px;
-}
 
 .clearfix:after {
     content: '\0020';
@@ -838,4 +832,119 @@ a:hover {
 .detail-detail .detail-link-more a {
     color: #36C;
     text-decoration: none;
+}
+
+
+/* 底部 */
+
+.footer {
+    padding: 50px 0 30px;
+    border-top: 3px solid #D8DBE5;
+    background: #F2F3F7;
+}
+
+.footer .issue {
+    overflow: hidden;
+}
+
+#content,
+.ju-wrapper,
+.ju-content {
+    position: relative;
+    margin: auto;
+    width: 940px;
+}
+
+.footer .issue .logo {
+    float: left;
+    width: 185px;
+}
+
+.footer .issue .logo i {
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    color: #8B8C8E;
+}
+
+.footer i {
+    font-family: ju-font;
+    font-style: normal;
+}
+
+.footer .device {
+    float: right;
+    width: 150px;
+}
+
+.footer .device dt {
+    color: #989898;
+}
+
+.footer .issue dt {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 5px 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer .device dd {
+    line-height: 28px;
+    margin-bottom: 14px;
+    background-color: #DCDEE6;
+}
+
+.footer .device i {
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer .device dd .txt {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    padding-left: 14px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer .issue .links {
+    overflow: hidden;
+}
+
+.footer .issue .links dl {
+    width: 20%;
+    float: left;
+}
+
+.footer .issue dt {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 5px 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer a {
+    display: block;
+    color: #7C7C7C;
+}
+
+.footer .issue .links dd {
+    line-height: 22px;
+    margin-bottom: 3px;
+}
+
+.footer .ali-link {
+    padding-top: 15px;
+    margin-top: 40px;
+    border-top: solid 1px #E6E7EB;
+    overflow: hidden;
 }
