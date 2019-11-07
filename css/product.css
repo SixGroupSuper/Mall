@@ -322,7 +322,7 @@ a:hover {
 
 .detail-main .header .bookMark {
     float: right;
-    margin-right: 10px;
+    margin-right: -150px;
     font-size: 14px;
     color: #626262;
 }
@@ -580,13 +580,8 @@ a:hover {
     margin-right: 5px;
 }
 
-.main-box .botbar .operation a span {
-    color: #f28e00;
-    font-size: 18px;
-    font-family: ju-font;
-    padding-right: 3px;
-    position: relative;
-    top: 2px;
+.main-box .botbar .operation img {
+    width: 4%;
 }
 
 .main-box .botbar .qrcode,
@@ -595,7 +590,9 @@ a:hover {
     position: relative;
     float: right;
     height: 28px;
+    margin-top: 5%;
     z-index: 1000;
+    padding-right: 40%;
 }
 
 .main-box .botbar .qrcode .qrcode_sm,
