@@ -62,6 +62,9 @@ ul,li{
     color: black;
 }
 /* -----下部功能页导航栏------ */
+.page{
+    background: #f5283b;
+}
 .ju-naver{
     position: relative;
     height: 80px;
@@ -105,7 +108,7 @@ ul,li{
 }
 /* ------头部的大图片区域 -------*/
 .clearfix{
-    height: 450px;
+    margin-right: -20px;
 }
 .clearfix .clip-content{
     position: relative;
@@ -143,12 +146,12 @@ ul,li{
 .jusp-floor .ju-wrappre .ju-wrapper {
     position: relative;
     margin: auto;
-    zoom: 1;
     width: 940px;
 }
 /* ----卡片集区域------ */
   /* 卡片区域 最外边的大盒子设置 */
 .ju-itemlist{
+    position: relative;
     margin: auto; 
     width: 940px;
 }
@@ -311,3 +314,80 @@ ul,li{
     color: #e61414;
     background: url(https://gtms03.alicdn.com/tps/i3/TB1CUPpHVXXXXbMXXXXdTOh_FXX-112-50.png) no-repeat;
 }
+/* -----显示更多<b>的设置------- */
+.loadMoreBtn{
+    overflow: hidden;
+    clear: both;
+    cursor: pointer;
+}
+.loadMoreBtn b{
+    border: 2px solid #F6224F;
+    border-radius: 10px;
+    color: #F6224F;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px auto;
+    width: 200px;
+    display: block;
+    font-weight: 400;
+    background: #fff;
+}
+/* ------下一排  item-small-v2 比较挤的卡片设置-------- */
+.ju-itemlist .clearfix .item-small-v2{
+    margin: 10px 10px 0 0;
+    width: 465px;
+    height: 212px;
+    float: left;
+    position: relative;
+    box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil{
+    width: 100%;
+    height: 100%;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .link-box{
+    width: 100%;
+    height: 100%;
+    background: 0 0;
+    border: none;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .link-box .brand-pic{
+    display: block;
+    width: 100%;
+    background: 0 0;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .detail{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .tags{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 26px;
+    overflow: hidden;
+    text-align: right;
+    background-color: #fff;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .info{
+    overflow: hidden;
+    padding-right: 20px;
+}
+.ju-itemlist .clearfix .item-small-v2 .status-avil .info .tag{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 26px;
+    margin-left: 10px;
+}
+
+.ju-itemlist .clearfix .item-small-v2 .status-avil .info .tag em , span.lt{
+    color: #e61414;
+}
+
