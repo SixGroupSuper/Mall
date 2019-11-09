@@ -12,3 +12,18 @@ document.getElementsByClassName("benefit")[1].innerHTML=obj.sites[0].benefit
 document.getElementsByClassName("prices")[0].innerHTML+=obj.sites[0].prices
 console.log();
 
+
+
+
+
+var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function(){
+    if(this.readyState==4&&this.status==200){
+        myobj=JSON.parse(this.responseText);
+        //document.getElementsByClassName("item-pic")[1].src=myobj[1].sites.url
+        console.log(myobj.sites[1].url);
+    }
+};
+xmlhttp.open("post","./json/index.json",true);
+xmlhttp.send();
+
