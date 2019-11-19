@@ -10,7 +10,13 @@ document.getElementsByClassName("benefit")[1].innerHTML=obj.sites[0].benefit
 document.getElementsByClassName("prices")[0].innerHTML+=obj.sites[0].prices
 console.log();
 
-/* var xmlhttp=new XMLHttpRequest();
+var xmlhttp
+if(window.XMLHttpRequest){
+    xmlhttp=new XMLHttpRequest();
+}
+else{
+   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
 xmlhttp.onreadystatechange=function(){
     if(this.readyState==4&&this.status==200){
         myobj=JSON.parse(this.responseText);
@@ -18,8 +24,8 @@ xmlhttp.onreadystatechange=function(){
         console.log(myobj.sites[1].url);
     }
 };
-xmlhttp.open("post","./json/index.json",true);
-xmlhttp.send(); */
+xmlhttp.open("GET","../json/index.json",true);
+xmlhttp.send();
 
 
 function myFunction(){

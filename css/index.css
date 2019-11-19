@@ -6,6 +6,9 @@
 ul,li{
     list-style: none;
 }
+a{
+    text-decoration:none;
+}
 .site-nav{
     position: relative;
     height: 30px;
