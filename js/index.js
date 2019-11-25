@@ -47,43 +47,96 @@ function newFunction() {
 }
 
 //注册用户输入判断
-var pattl = new RegExp(/^[a-zA-Z]+$/);
-var pattl2 = new RegExp(/^[1-9]\d*|0$/);
+/* var pattl = new RegExp(/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/); */
 function myFunction() {
-    var uid = document.getElementById("uid").value
+    var uid = document.getElementById("uid")
     console.info(uid);
+    var isError=true;
+
     if (uid == "" || uid == null) {
         return
     }
     else {
-        for (let i = 0; i < uid.length; i++) {
-            if (pattl.test(uid[0])) {
-                document.getElementsByClassName("help-block")[0].innerHTML = "格式正确";
+        if(uid.value.length>20||uid.value.length<6){
+            document.getElementById("hst").innerHTML="用户名请输入6-20位字符";
+            document.getElementById("hst").style.color="red";
+            return;
+        }else if(uid.value.charCodeAt(0)>=48&&(uid.value.charCodeAt(0)<=57)){
+            document.getElementById("hst").innerHTML="首字符必须为字母";
+            document.getElementById("hst").style.color="red";
+            return;
+        }else for(var i=0;i<uid.value.charCodeAt(i);i++){
+            if((uid.value.charCodeAt(i)<48)||(uid.value.charCodeAt(i)>57)&&(uid.value.charCodeAt(i)<97)||(uid.value.charCodeAt(i)>122)){
+                document.getElementById("hst").innerHTML="必须为字母跟数字组成";
+                document.getElementById("hst").style.color="red";
+                return;
+            }else{
+                document.getElementById("hst").innerHTML="格式正确";
+                document.getElementById("hst").style.color="#32CD32";
+                return;
             }
-            else{
-                document.getElementsByClassName("help-block")[0].innerHTML = "开头必须是字母";
-                document.getElementById("hst").style.color="red"
-            }
-            if(pattl2.test(uid[i+1])){
-                document.getElementsByClassName("help-block")[0].innerHTML = "格式正确";
-            }
-            else{
-                document.getElementsByClassName("help-block")[0].innerHTML = "必须包含字母和数字";
-                document.getElementsByClassName("help-block")[0].style.coloe="red";
-            }
-
+        
         }
     }
-
-
 }
 
-
-
-
-
-
-
+//注册用户的密码的输入判断
+function mypwd(){
+    var pwd=document.getElementById("pwd")
+    console.info(pwd);
+    if(pwd==""||pwd==null){
+        return;
+    }else{
+        if(pwd.value.length<6){
+            document.getElementById("hst2").innerHTML="至少6位字母或数字";
+            document.getElementById("hst2").style.color="red";
+            return;
+        }else for(var t=0;t<pwd.value.charCodeAt(t);t++){
+            if((pwd.value.charCodeAt(t)<48)||(pwd.value.charCodeAt(t)>57)&&(pwd.value.charCodeAt(t)<97)||(pwd.value.charCodeAt(t)>122)){
+                document.getElementById("hst2").innerHTML="必须为字母或数字组成"
+                document.getElementById("hst2").style.color="red";
+                return;
+            }else{
+                document.getElementById("hst2").innerHTML="格式正确";
+                document.getElementById("hst2").style.color="#32CD32";
+                return;
+            }
+        }
+    }
+}
+//注册用户的密码再次输入验证
+function myvalidation(){
+    var pwdconfirm=document.getElementById("pwdconfirm")
+    console.info(pwdconfirm);
+    if(pwdconfirm==""||pwdconfirm==null){
+        return;
+    }else if(pwdconfirm.value==pwd.value){
+        document.getElementById("hst3").innerHTML="密码正确";
+        document.getElementById("hst3").style.color="#32CD32";
+        return;
+    }else{
+        document.getElementById("hst3").innerHTML="与第一次密码不匹配";
+        document.getElementById("hst3").style.color="red";
+        return;
+    }
+}
+//注册用户的验证邮箱
+var text = new RegExp(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/);
+function myemail(){
+   var Emailconfirm=document.getElementById("emailconfirm");
+   console.log(Emailconfirm)
+   if(Emailconfirm==""||Emailconfirm==null){
+      return;
+   }else if (text.test(Emailconfirm.value)) {
+     document.getElementById("hst4").innerHTML="格式正确";
+     document.getElementById("hst4").style.color="#32CD32";
+     return;
+   }else{
+      document.getElementById("hst4").innerHTML="格式错误";
+      document.getElementById("hst4").style.color="red";
+   }
+}
+var button= document.getElementById("buttons").disabled=
 
 
 

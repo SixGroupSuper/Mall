@@ -44,29 +44,26 @@
                                 <form class="form-group" action="">
                                     <div class="form-group">
                                         <label for="">用户名</label>
-                                        <input class="form-control" id="uid" type="text" placeholder="6-15位字母或数字" onkeyup="myFunction()">
+                                        <input class="form-control" id="uid" type="text" placeholder="6-15位字母或数字" onblur="myFunction()">
                                         <span class="help-block" id="hst"></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="">密码</label>
-                                        <input class="form-control" type="password" placeholder="至少6位字母或数字">
-                                        <span class="help-block">一个较长的帮助文本块，超过一行，
-                                            需要扩展到下一行。本实例中的帮助文本总共有两行。</span>
+                                        <input class="form-control" id="pwd" type="password" placeholder="至少6位字母或数字" onblur="mypwd()">
+                                        <span class="help-block" id="hst2"></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="">再次输入密码</label>
-                                        <input class="form-control" type="password" placeholder="至少6位字母或数字">
-                                        <span class="help-block">一个较长的帮助文本块，超过一行，
-                                            需要扩展到下一行。本实例中的帮助文本总共有两行。</span>
+                                        <input class="form-control" id="pwdconfirm" type="password" placeholder="至少6位字母或数字" onblur="myvalidation()">
+                                        <span class="help-block" id="hst3"></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="">邮箱</label>
-                                        <input class="form-control" type="email" placeholder="例如:***@***.com">
-                                        <span class="help-block">一个较长的帮助文本块，超过一行，
-                                            需要扩展到下一行。本实例中的帮助文本总共有两行。</span>
+                                        <input class="form-control" id="emailconfirm" type="email" placeholder="例如:***@***.com" onblur="myemail()">
+                                        <span class="help-block" id="hst4"></span>
                                     </div>
                                     <div class="text-right">
-                                        <button class="btn btn-primary" type="submit"
+                                        <button class="btn btn-primary" type="submit" id="buttons"
                                             style="background-color: #3a8cd2b3;border: 0px solid transparent;">提交</button>
                                         <button class="btn btn-danger" data-dismiss="modal"
                                             style="background-color: #fb5e5999;border: 0px solid transparent;">取消</button>
