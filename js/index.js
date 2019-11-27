@@ -27,6 +27,10 @@ xmlhttp.onreadystatechange=function(){
 xmlhttp.open("GET","../json/index.json",true);
 xmlhttp.send(); */
 
+
+
+
+document.getElementById("btn").disabled=true;
 //显示更多的注册事件
 function myFunction() {
     for (var i = 0; i < 3; i++) {
@@ -130,13 +134,15 @@ function myemail(){
    }else if (text.test(Emailconfirm.value)) {
      document.getElementById("hst4").innerHTML="格式正确";
      document.getElementById("hst4").style.color="#32CD32";
+     document.getElementById("btn").disabled=false;
      return;
    }else{
       document.getElementById("hst4").innerHTML="格式错误";
       document.getElementById("hst4").style.color="red";
+      document.getElementById("btn").disabled=true;
    }
 }
-var button= document.getElementById("buttons").disabled=
+
 
 
 
